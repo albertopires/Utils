@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package music.penguin.utils.mail;
+package io.gitgub.albertopires.mail;
 
 import com.sun.mail.smtp.SMTPTransport;
 import java.util.Date;
@@ -13,7 +13,7 @@ import javax.mail.internet.MimeMessage;
 
 /**
  * 
- * @author Administrador
+ * @author Alberto Pires
  */
 public class MailNotify {
 
@@ -32,8 +32,7 @@ public class MailNotify {
 
 	public static void main(String[] args) {
 		// Without Authentication
-		MailNotify mn = new MailNotify("stmp.example.com",
-				"root@example.com");
+		MailNotify mn = new MailNotify("stmp.example.com", "root@example.com");
 		mn.setSubject("Teste New");
 		String r[] = new String[2];
 		r[0] = "user1@generic.com";
@@ -49,17 +48,15 @@ public class MailNotify {
 
 		// With Authentication
 		/*
-		MailNotify mna = new MailNotify("smtp.example.com","send@example.com");
-		mna.setSubject("Teste Mail - Internet");
-		mna.setUser("stmp_auth_user");
-		mna.setPassword("smtp_password"); 
-		mna.setAuth(true); 
-		String ra[] = new String[2]; 
-		ra[0] = "user1@company.com"; 
-		ra[1] =	"user2@anothercompany.com"; 
-		mna.setMessage("Another test");
-		mna.setReceipient(ra); mna.sendMail();
-		*/
+		 * MailNotify mna = new
+		 * MailNotify("smtp.example.com","send@example.com");
+		 * mna.setSubject("Teste Mail - Internet");
+		 * mna.setUser("stmp_auth_user"); mna.setPassword("smtp_password");
+		 * mna.setAuth(true); String ra[] = new String[2]; ra[0] =
+		 * "user1@company.com"; ra[1] = "user2@anothercompany.com";
+		 * mna.setMessage("Another test"); mna.setReceipient(ra);
+		 * mna.sendMail();
+		 */
 	}
 
 	public boolean isReady() {
@@ -79,7 +76,7 @@ public class MailNotify {
 	/**
 	 * 
 	 * @param smtp
-	 * SMTP Host
+	 *            SMTP Host
 	 * @param sender
 	 */
 	public MailNotify(String smtp, String sender) {
