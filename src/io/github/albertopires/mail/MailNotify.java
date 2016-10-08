@@ -1,8 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package io.gitgub.albertopires.mail;
+package io.github.albertopires.mail;
 
 import java.util.Date;
 import java.util.Properties;
@@ -109,14 +105,14 @@ public class MailNotify {
 			}
 			msg.setText(message);
 			// Transport.send(msg);
-			SMTPTransport t = (SMTPTransport) session.getTransport(proto);
-			if (isAuth())
-				t.connect(host, user, password);
-			else
-				t.connect();
-			t.sendMessage(msg, msg.getAllRecipients());
-			System.out.println("Response: " + t.getLastServerResponse());
-			t.close();
+			//SMTPTransport t = (SMTPTransport) session.getTransport(proto);
+//			if (isAuth())
+//				t.connect(host, user, password);
+//			else
+//				t.connect();
+//			t.sendMessage(msg, msg.getAllRecipients());
+//			System.out.println("Response: " + t.getLastServerResponse());
+//			t.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
